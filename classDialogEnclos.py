@@ -53,17 +53,17 @@ class DialogEnclos(QtWidgets.QDialog, Ui_Dialog):
             if obj.TypeEnclos == E1.TypeEnclos:
                 ExistePas = False
 
-        if ExistePas == True:
+        if ExistePas == True:   # Vérifie si l'attribut TypeEnclos existe déjà dans la liste lsEnclos
             self.labelErreurTypeEnclos.setHidden(True)
         else:
             self.labelErreurTypeEnclos.setVisible(True)
 
-        if E1.TailleAuCarre == self.spinBoxTailleAuCarre.value():
+        if E1.TailleAuCarre == self.spinBoxTailleAuCarre.value():   # Vérifie si l'attribut TailleAuCarre a été changé
             self.labelErreurTailleAuCarre.setHidden(True)
         else:
             self.labelErreurTailleAuCarre.setVisible(True)
 
-        if E1.Environnement == self.comboBoxEnvironnement.currentText():
+        if E1.Environnement == self.comboBoxEnvironnement.currentText():    # Vérifie si l'attribut Environnement a été changé
             self.labelErreurEnvironnement.setHidden(True)
         else:
             self.labelErreurEnvironnement.setVisible(True)
@@ -89,12 +89,12 @@ class DialogEnclos(QtWidgets.QDialog, Ui_Dialog):
         E1.Environnement = self.comboBoxEnvironnement.currentText()
         E1.TailleAuCarre = self.spinBoxTailleAuCarre.value()
 
-        if E1.TailleAuCarre == self.spinBoxTailleAuCarre.value():
+        if E1.TailleAuCarre == self.spinBoxTailleAuCarre.value():   # Vérifie si l'attribut TailleAuCarre a été changé
             self.labelErreurTailleAuCarre.setHidden(True)
         else:
             self.labelErreurTailleAuCarre.setVisible(True)
 
-        if E1.Environnement == self.comboBoxEnvironnement.currentText():
+        if E1.Environnement == self.comboBoxEnvironnement.currentText():    # Vérifie si l'attribut Environnement a été changé
             self.labelErreurEnvironnement.setHidden(True)
         else:
             self.labelErreurEnvironnement.setVisible(True)

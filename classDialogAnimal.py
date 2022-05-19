@@ -57,7 +57,7 @@ class DialogAnimal(QtWidgets.QDialog, Ui_Dialog):
             if elt.NumeroAnimal == A1.NumeroAnimal:
                 NumeroExiste = True
 
-        if A1.NumeroAnimal != self.lineEditNumeroAnimal.text():
+        if A1.NumeroAnimal != self.lineEditNumeroAnimal.text(): # Vérifie si l'attribut NumeroAnimal a été changé
             self.labelErreurNumeroAnimal.setText("Le numéro est invalide.")
         else:
             self.labelErreurNumeroAnimal.clear()
@@ -136,7 +136,7 @@ class DialogAnimal(QtWidgets.QDialog, Ui_Dialog):
             self.AnimalTemp.Posture = self.comboBoxPosture.currentText()
             self.AnimalTemp.Cri = self.lineEditCri.text()
 
-            if self.AnimalTemp.Cri == self.lineEditCri.text().title():
+            if self.AnimalTemp.Cri == self.lineEditCri.text().title():  # Vérifie si l'attribut Cri a été changé
                 lsAnimaux.append(self.AnimalTemp)
                 self.textBrowserAnimal.clear()
                 for obj in lsAnimaux:
@@ -170,7 +170,7 @@ class DialogAnimal(QtWidgets.QDialog, Ui_Dialog):
             self.AnimalTemp.Nid = self.lineEditNid.text()
             self.AnimalTemp.Camouflage = self.comboBoxCamouflage.currentText()
 
-            if self.AnimalTemp.Nid == self.lineEditNid.text().title():
+            if self.AnimalTemp.Nid == self.lineEditNid.text().title():  # Vérifie si l'attribut Nid a été changé
                 lsAnimaux.append(self.AnimalTemp)
                 self.textBrowserAnimal.clear()
                 for obj in lsAnimaux:
@@ -195,7 +195,7 @@ class DialogAnimal(QtWidgets.QDialog, Ui_Dialog):
             self.AnimalTemp.Posture = self.comboBoxPosture.currentText()
             self.AnimalTemp.Cri = self.lineEditCri.text()
 
-            if self.AnimalTemp.Cri == self.lineEditCri.text().title():
+            if self.AnimalTemp.Cri == self.lineEditCri.text().title():  # Vérifie si l'attribut Cri a été changé
                 for obj in lsAnimaux:
                     if obj.NumeroAnimal == self.AnimalTemp.NumeroAnimal:
                         lsAnimaux.remove(obj)
@@ -233,7 +233,7 @@ class DialogAnimal(QtWidgets.QDialog, Ui_Dialog):
             self.AnimalTemp.Nid = self.lineEditNid.text()
             self.AnimalTemp.Camouflage = self.comboBoxCamouflage.currentText()
 
-            if self.AnimalTemp.Nid == self.lineEditNid.text().title():
+            if self.AnimalTemp.Nid == self.lineEditNid.text().title():  # Vérifie si l'attribut Nid a été changé
                 lsAnimaux.append(self.AnimalTemp)
                 for obj in lsAnimaux:
                     if obj.NumeroAnimal == self.AnimalTemp.NumeroAnimal:

@@ -27,30 +27,27 @@ class MainWdwQt(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setWindowTitle("Menu")
 
-    def AnimalTermine(self):
-        self.pushButtonAnimal.setEnabled(True)
-
     @QtCore.pyqtSlot()
     def on_pushButtonAnimal_clicked(self):
         """
         Ouvre le dialog DialogAnimal
         """
-        self.pushButtonAnimal.setDisabled(True)
+        self.pushButtonAnimal.setDisabled(True) # Rend le bouton Animal inactif pour empêcher l'ouverture de trop de fenêtres
         dialog = DialogAnimal()
         dialog.show()
         reply = dialog.exec_()
-        self.pushButtonAnimal.setEnabled(True)
+        self.pushButtonAnimal.setEnabled(True)  # Rend le bouton Animal actif à nouveau pour pouvoir interagir avec à nouveau
 
     @QtCore.pyqtSlot()
     def on_pushButtonEnclos_clicked(self):
         """
         Ouvre le dialog DialogEnclos
         """
-        self.pushButtonEnclos.setDisabled(True)
+        self.pushButtonEnclos.setDisabled(True) # Rend le bouton Enclos inactif pour empêcher l'ouverture de trop de fenêtres
         dialog = DialogEnclos()
         dialog.show()
         reply = dialog.exec_()
-        self.pushButtonEnclos.setEnabled(True)
+        self.pushButtonEnclos.setEnabled(True)  # Rend le bouton Enclos actif à nouveau pour pouvoir interagir avec à nouveau
 
     @QtCore.pyqtSlot()
     def on_pushButtonQuitter_clicked(self):
